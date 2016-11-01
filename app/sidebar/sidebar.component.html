@@ -1,0 +1,29 @@
+
+<style>
+    .site-sidenav {
+    background: blue;
+}
+</style>
+    <div id="sideNavContainer" ng-controller="sideNavController as ctrl" layout="row" ng-cloak>
+         <md-sidenav md-component-id="left" class="site-sidenav md-sidenav-left" md-is-locked-open="$mdMedia('gt-sm')">
+             <chill-fqheader ></chill-fqheader>
+             <ul>
+                 <li>a</li>
+                 <li>a</li>
+                 <li>a</li>
+                 <li>a</li>
+                 <li>a</li>
+                 <li>a</li>
+                 <li>a</li>
+                 <li>a</li>
+             </ul>
+        </md-sidenav>
+         <md-content>           
+            <md-button ng-click="openLeftMenu()">Open Left Menu</md-button>
+			<md-button ng-click="openRightMenu()">Open Right Menu</md-button>
+         </md-content>
+         <md-sidenav md-component-id="right" class="md-sidenav-right">
+            <md-button href="http://google.com">Google</md-button>
+         </md-sidenav>
+      </div>
+

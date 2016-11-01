@@ -1,0 +1,74 @@
+  
+    
+    <style>
+      .logo{
+           position: relative;
+  overflow: hidden;
+  width: 100px;
+  height: 60px;
+  display: inline-block;
+  
+
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  font-size: 12px;
+  font-family: sans-serif;
+}
+      /**
+ * The "shine" element
+ */
+
+.logo:after {
+  content: "";
+  position: absolute;
+  top: -110%;
+  left: -210%;
+  width: 200%;
+  height: 200%;
+  opacity: 0;
+  transform: rotate(30deg);
+  
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient(
+    to right, 
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0.0) 100%
+  );
+}
+
+/* Hover state - trigger effect */
+
+.logo:hover:after {
+  opacity: 1;
+  top: -30%;
+  left: -30%;
+  transition-property: left, top, opacity;
+  transition-duration: 0.7s, 0.7s, 0.15s;
+  transition-timing-function: ease;
+}
+
+/* Active state */
+
+.logo:active:after {
+  opacity: 0;
+}
+        
+        
+    </style>
+    <md-toolbar class="md-hue-2"  md-theme="chill-purple">
+        <div class="md-toolbar-tools">
+            <a href="#">
+            <md-icon md-svg-src = 'images/chill-white-logo.svg' class="logo"></md-icon>
+            </a>
+            <!--<h2>
+                <span class="chunkfive">Chill Motor FQ</span>
+            </h2>-->
+            <span flex></span>
+            <md-button >Close</md-button>
+        </div>
+    </md-toolbar>	
