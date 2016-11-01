@@ -1,0 +1,45 @@
+<div ng-controller="yourJob">    
+	<md-content style="margin: 16px; padding:16px">
+		<div layout-gt-xs="row">
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>Employment Status</label>
+				<md-select name="relationshipStatus" ng-model="relationshipStatuses" md-selected-text="">
+					<md-optgroup label="Relationship Status">
+						<md-option ng-value="relationshipStatus" ng-repeat="relationshipStatus in relationshipStatuses">{{relationshipStatus}}</md-option>
+					</md-optgroup>
+				</md-select>				
+			</md-input-container>
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>Ocupation</label>
+				<md-select name="relationshipStatus" ng-model="relationshipStatuses" md-selected-text="">
+					<md-optgroup label="Relationship Status">
+						<md-option ng-value="relationshipStatus" ng-repeat="relationshipStatus in relationshipStatuses">{{relationshipStatus}}</md-option>
+					</md-optgroup>
+				</md-select>				
+			</md-input-container>	
+		</div>
+		<div layout-gt-xs="row">
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>Employment Status</label>
+				<md-select name="relationshipStatus" ng-model="relationshipStatuses" md-selected-text="">
+					<md-optgroup label="Relationship Status">
+						<md-option ng-value="relationshipStatus" ng-repeat="relationshipStatus in relationshipStatuses">{{relationshipStatus}}</md-option>
+					</md-optgroup>
+				</md-select>				
+			</md-input-container>
+			<md-input-container class="md-block" flex-gt-sm>
+				 <label>Employer's Name</label>
+				<input ng-model="user.phone" type="text" >
+			</md-input-container>
+		</div>
+		<div layout-gt-xs="row" layout-align="start center">
+			<md-radio-group ng-model="application.date" layout="row" layout-align="start center" class="md-block" flex-gt-sm>
+				<md-radio-button value="M" class="md-primary">Male</md-radio-button>
+				<md-radio-button value="F"> Female </md-radio-button>
+			</md-radio-group>			
+		</div>
+		<section layout="row" layout-sm="column" layout-align="left center" layout-wrap>
+			<md-button class="md-primary  md-raised md-hue-5" ng-click="yourJobBtn()">Continue</md-button>
+		</section>
+	</md-content>
+</div>

@@ -1,0 +1,15 @@
+{
+	"version": 1,
+	"dateCreated":"2016-09-21",
+	"author":"Victor Figueira",
+	"description": "Prod",
+	"code": "C00",
+	"data": [{
+		"value": "LN",
+		"description": "Loan"
+	}, {
+		"value": "CC",
+		"description": "Credit Card"
+	}]
+
+}

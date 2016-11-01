@@ -1,0 +1,58 @@
+<div ng-controller="whereYouLive">    
+	<md-content style="margin: 16px; padding:16px" >
+			
+		<div layout-gt-xs="row" class="md-block" flex-gt-sm>
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>Your Address</label>
+				<input ng-model="application.surname">
+			</md-input-container>
+		</div>
+		<div layout-gt-xs="row" class="md-block" flex-gt-sm>
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>Your Address</label>
+				<input ng-model="application.surname">
+			</md-input-container>
+		</div>
+		
+		<div layout-gt-xs="row">
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>County</label>
+				<md-select name="relationshipStatus" ng-model="relationshipStatuses" md-selected-text="">
+					<md-optgroup label="Relationship Status">
+						<md-option ng-value="relationshipStatus" ng-repeat="relationshipStatus in relationshipStatuses">{{relationshipStatus}}</md-option>
+					</md-optgroup>
+				</md-select>				
+			</md-input-container>
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>Eircode</label>
+				<md-select name="relationshipStatus" ng-model="relationshipStatuses" md-selected-text="">
+					<md-optgroup label="Relationship Status">
+						<md-option ng-value="relationshipStatus" ng-repeat="relationshipStatus in relationshipStatuses">{{relationshipStatus}}</md-option>
+					</md-optgroup>
+				</md-select>				
+			</md-input-container>	
+		</div>
+
+		<div layout-gt-xs="row">
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>Residential Status</label>
+				<md-select name="relationshipStatus" ng-model="relationshipStatuses" md-selected-text="">
+					<md-optgroup label="Relationship Status">
+						<md-option ng-value="relationshipStatus" ng-repeat="relationshipStatus in relationshipStatuses">{{relationshipStatus}}</md-option>
+					</md-optgroup>
+				</md-select>				
+			</md-input-container>
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>Time Living at Current Address</label>
+				<md-select name="relationshipStatus" ng-model="relationshipStatuses" md-selected-text="">
+					<md-optgroup label="Relationship Status">
+						<md-option ng-value="relationshipStatus" ng-repeat="relationshipStatus in relationshipStatuses">{{relationshipStatus}}</md-option>
+					</md-optgroup>
+				</md-select>				
+			</md-input-container>	
+		</div>
+		<section layout="row" layout-sm="column" layout-align="left center" layout-wrap>
+			<md-button class="md-chill-button md-chill-green-button" ng-click="whereYouLiveBtn()">Continue</md-button>
+		</section>
+	</md-content>
+</div>

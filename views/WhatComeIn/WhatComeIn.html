@@ -1,0 +1,46 @@
+<div ng-controller="whatComesIn">    
+	<md-content style="margin: 16px; padding:16px" >
+		<div layout-gt-xs="row">
+			<div layout-gt-xs="row" class="md-block" flex-gt-sm>
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Salary</label>
+					<input ng-model="application.surname">
+					<div class="hint" ng-show="true">After tax and deductions</div>
+					
+				</md-input-container>
+			</div>
+			<div layout-gt-xs="row" class="md-block" flex-gt-sm>
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Social Welfare Payments</label>
+					<input ng-model="application.surname">
+					<div class="hint" ng-show="true">Excluding child benefit</div>
+				</md-input-container>
+			</div>
+		</div>
+		<div layout-gt-xs="row">
+			<div layout-gt-xs="row" class="md-block" flex-gt-sm>
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Rental Income</label>
+					<input ng-model="application.surname">
+					<div class="hint" ng-show="true">If applicable</div>
+				</md-input-container>
+			</div>
+			<div layout-gt-xs="row" class="md-block" flex-gt-sm>
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Other Household Income</label>
+					<input ng-model="application.surname">
+					<div class="hint" ng-show="true">After tax and deductions</div>
+				</md-input-container>
+			</div>
+		</div>
+		<div layout-gt-xs="row" class="md-block" flex-gt-sm>
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>Total Value of Savings & Investments</label>
+				<input ng-model="application.surname">				
+			</md-input-container>
+		</div>
+		<section layout="row" layout-sm="column" layout-align="left center" layout-wrap>
+			<md-button class="md-primary  md-raised md-hue-5" ng-click="whatComesInBtn()">Continue</md-button>
+		</section>
+	</md-content>
+</div>

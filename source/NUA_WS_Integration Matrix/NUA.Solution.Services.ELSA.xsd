@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/NUA.Solution.Services.ELSA" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/NUA.Solution.Services.ELSA" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="FirstApplicationData">
+    <xs:sequence>
+      <xs:element name="AppRef" type="xs:string" />
+      <xs:element name="Consent" type="xs:string" />
+      <xs:element name="County" type="xs:int" />
+      <xs:element name="DOB" type="xs:string" />
+      <xs:element name="EmailAddr" type="xs:string" />
+      <xs:element name="FirstName" type="xs:string" />
+      <xs:element name="Gender" type="xs:string" />
+      <xs:element name="MNumber" type="xs:string" />
+      <xs:element name="PostalCode" type="xs:string" />
+      <xs:element name="Prod" type="xs:string" />
+      <xs:element name="SrcCode" type="xs:string" />
+      <xs:element name="AddrLn1" type="xs:string" />
+      <xs:element name="AddrLn2" type="xs:string" />
+      <xs:element name="AddrLn3" type="xs:string" />
+      <xs:element name="Surname" type="xs:string" />
+      <xs:element name="Title" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FirstApplicationData" type="tns:FirstApplicationData" />
+  <xs:complexType name="UpdatedApplicationData">
+    <xs:sequence>
+      <xs:element name="AppRef" type="xs:string" />
+      <xs:element name="EmailAddr" type="xs:string" />
+      <xs:element name="EmpName" type="xs:string" />
+      <xs:element name="EmpStat" type="xs:string" />
+      <xs:element name="MNumber" type="xs:string" />
+      <xs:element name="MarStat" type="xs:string" />
+      <xs:element name="National" type="xs:string" />
+      <xs:element name="NumCCs" type="xs:int" />
+      <xs:element name="NumDep" type="xs:int" />
+      <xs:element name="Occ" type="xs:string" />
+      <xs:element name="OthHHInc" type="xs:int" />
+      <xs:element name="Prod" type="xs:string" />
+      <xs:element name="Purpose" type="xs:string" />
+      <xs:element name="RentInc" type="xs:int" />
+      <xs:element name="ReqLnAmt" type="xs:int" />
+      <xs:element name="ReqTerm" type="xs:string" />
+      <xs:element name="ResStat" type="xs:string" />
+      <xs:element name="SalaryPayment" type="xs:string" />
+      <xs:element name="SocWelfInc" type="xs:int" />
+      <xs:element name="SrcCode" type="xs:string" />
+      <xs:element name="TimeInJob" type="xs:int" />
+      <xs:element name="TmCurAdd" type="xs:int" />
+      <xs:element name="TmInRoI" type="xs:int" />
+      <xs:element name="TotMthLnRpy" type="xs:int" />
+      <xs:element name="TotMthRntMrt" type="xs:int" />
+      <xs:element name="TotNMthInc" type="xs:int" />
+      <xs:element name="ValCCLims" type="xs:int" />
+      <xs:element name="ValODLims" type="xs:int" />
+      <xs:element name="ValSavsInv" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdatedApplicationData" type="tns:UpdatedApplicationData" />
+  <xs:complexType name="FinalApplicationData">
+    <xs:sequence>
+      <xs:element name="AppRef" type="xs:string" />
+      <xs:element name="MchMMM" type="xs:string" />
+      <xs:element name="MchPoB" type="xs:string" />
+      <xs:element name="MrktP" type="xs:string" />
+      <xs:element name="WorkTN" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FinalApplicationData" type="tns:FinalApplicationData" />
+</xs:schema>

@@ -1,0 +1,43 @@
+{
+	"version": 1,
+	"dateCreated":"2016-09-21",
+	"author": "Victor Figueira",
+	"company": "Chill",
+	"description": "Employment Status",
+	"code": "C05",
+	"data": [{
+		"value": "PFT",
+		"description": "Permanent Full time"
+	}, {
+		"value": "PPT",
+		"description": "Permanent Part time"
+	}, {
+		"value": "CNT",
+		"description": "Contract"
+	}, {
+		"value": "TMP",
+		"description": "Temporary"
+	}, {
+		"value": "RT",
+		"description": "Retired"
+	}, {
+		"value": "PR",
+		"description": "Probation"
+	}, {
+		"value": "SE",
+		"description": "Self-Employed"
+	}, {
+		"value": "HM",
+		"description": "Homemaker"
+	}, {
+		"value": "S",
+		"description": "Student"
+	}, {
+		"value": "UE",
+		"description": "Unemployed"
+	}, {
+		"value": "OTH",
+		"description": "Other"
+	}]
+
+}

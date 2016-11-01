@@ -1,0 +1,100 @@
+<div ng-controller="aboutYou">    
+	<md-content style="margin: 16px; padding:16px" >
+			
+		<div layout-gt-xs="row">	
+			<div layout-gt-xs="row" class="md-block" flex-gt-sm>
+				<md-input-container 
+					class="md-block" 
+					flex="initial" >
+					<label>{{Title.label}}</label>
+					<md-select 
+						id="{{Title.id}}"
+						ng-model="Title.value" 
+						aria-label="{{Title.value}}" 
+						ng-change="TitleChanged(Title)">
+						<md-option 
+							ng-model="Title.value" 
+							ng-repeat="title in titles" 
+							value="{{title.value}}">
+							{{title.name}}
+						</md-option>
+					</md-select>
+				</md-input-container>
+
+				<md-input-container 
+					class="md-block" 
+					flex-gt-sm>
+					<label>{{FirstName.label}}</label>
+					<input 
+						ng-model="FirstName.value"
+						ng-change="FirstNameChanged(FirstName)">
+				</md-input-container>
+			</div>
+			<div layout-gt-xs="row" class="md-block" flex-gt-sm>
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>{{Surname.label}}</label>
+					<input 
+						ng-model="Surname.value"
+						ng-change="SurnameChanged(Surname)">
+				</md-input-container>
+			</div>
+		</div>
+				
+		<div layout-gt-xs="row" layout-align="start center">
+			<md-radio-group 
+				ng-model="PersonalData.Gender" 
+				layout="row" 
+				layout-align="start center" 
+				class="md-block" 
+				flex-gt-sm 
+				ng-change="GenderChanged(gender)">
+				<md-radio-button ng-repeat="gender in Genders" ng-value="gender.value" >
+					{{ gender.description }}
+				</md-radio-button>				
+			</md-radio-group>
+			
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>{{DOB.label}}</label>
+				<md-datepicker md-max-date="maxDate" ng-model="PersonalData.DOB"></md-datepicker>
+			</md-input-container>
+		</div>	
+				
+		<div layout-gt-xs="row">
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>Relationship Status</label>
+				<md-select name="relationshipStatus" ng-model="relationshipStatuses" md-selected-text="">
+					<md-optgroup label="Relationship Status">
+						<md-option ng-value="relationshipStatus" ng-repeat="relationshipStatus in relationshipStatuses">{{relationshipStatus}}</md-option>
+					</md-optgroup>
+				</md-select>				
+			</md-input-container>
+			
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>Dependants</label>
+				<md-select name="depend" ng-model="selectedItem" md-selected-text="getSelectedText()">
+					<md-optgroup label="Dependants">
+						<md-option ng-value="item" ng-repeat="item in items">{{item}}</md-option>
+					</md-optgroup>
+				</md-select>				
+			</md-input-container>				
+		</div>
+				
+		<div layout-gt-xs="row">				
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>Email</label>
+				<input ng-model="user.email" type="email" ng-required="true">
+			</md-input-container>	
+			
+			 <md-input-container class="md-block" flex-gt-sm>
+				 <label>Phone No</label>
+				<input ng-model="user.phone" type="text"  ui-mask="(999) 999-9999"  ui-mask-placeholder ui-mask-placeholder-char="_" ng-required="true">
+			</md-input-container>
+		</div>	
+				
+		<section layout="row" layout-sm="column" layout-align="left center" layout-wrap>
+			<md-button class="md-primary  md-raised md-hue-5" ng-click="aboutYouBtn()">Continue</md-button>
+		</section>
+	</md-content>
+</div>
+
+

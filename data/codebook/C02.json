@@ -1,0 +1,58 @@
+{
+	"version": 1,
+	"dateCreated":"2016-09-21",
+	"author": "Victor Figueira",
+	"company": "Chill",
+	"description": "Term",
+	"code": "C02",
+	"data": [{
+		"value": "6",
+		"description": "6 Months"
+	}, {
+		"value": "12",
+		"description": "12 Months"
+	}, {
+		"value": "18",
+		"description": "18 Months"
+	}, {
+		"value": "24",
+		"description": "24 Months"
+	}, {
+		"value": "30",
+		"description": "30 Months"
+	}, {
+		"value": "36",
+		"description": "36 Months"
+	}, {
+		"value": "42",
+		"description": "42 Months"
+	}, {
+		"value": "48",
+		"description": "48 Months"
+	}, {
+		"value": "54",
+		"description": "54 Months"
+	}, {
+		"value": "60",
+		"description": "60 Months"
+	}, {
+		"value": "66",
+		"description": "66 Months"
+	}, {
+		"value": "72",
+		"description": "72 Months"
+	}, {
+		"value": "78",
+		"description": "78 Months"
+	}, {
+		"value": "84",
+		"description": "84 Months"
+	}, {
+		"value": "90",
+		"description": "90 Months"
+	}, {
+		"value": "CC",
+		"description": "Credit Card"
+	}]
+
+}

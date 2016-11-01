@@ -1,0 +1,15 @@
+{
+	"version": 1,
+	"dateCreated":"2016-09-21",
+	"author":"Victor Figueira",
+	"description": "Yes/No",
+	"code": "C01",
+	"data": [{
+		"value": "Y",
+		"description": "Yes"
+	}, {
+		"value": "N",
+		"description": "No"
+	}]
+
+}

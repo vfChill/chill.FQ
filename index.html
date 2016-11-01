@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+   <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.0-rc.5/angular-material.css"/>
+    <link rel="stylesheet" href="https://material.angularjs.org/1.1.0-rc.5/docs.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="css/styles.css"/>
+    <style>
+      .inputdemoIcons {
+  /*
+.right-icon {
+  position: absolute;
+  top: 4px;
+  right: 2px;
+  left: auto;
+  margin-top: 0;
+}
+*/ }
+  .inputdemoIcons .inputIconDemo {
+    background-color: purple;
+    min-height: 48px; }
+  .inputdemoIcons md-input-container:not(.md-input-invalid) > md-icon.email {
+    color: green; }
+  .inputdemoIcons md-input-container:not(.md-input-invalid) > md-icon.name {
+    color: dodgerblue; }
+  .inputdemoIcons md-input-container.md-input-invalid > md-icon.email,
+  .inputdemoIcons md-input-container.md-input-invalid > md-icon.name {
+    color: red; }
+
+    </style>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.0-rc.5/angular-material.js"></script>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/angulaUI-mask.js"></script>
+      <title>Chill Money</title>
+  </head>
+  <body >
+
+<!-- Header -->
+    <div>
+      <md-toolbar>    
+        <div class="md-toolbar-tools">
+          <md-button class="md-icon-button" aria-label="Icon">        
+          </md-button>
+          <h1>
+            <span>Chill MONEY</span>
+          </h1>
+        </div>
+      </md-toolbar>
+    </div>
+  <!-- Header end -->
+
+  <div>
+    <div >
+      <div id="loanForm" ng-controller="DemoCtrl" layout="column" layout-xs="column" layout-align="center center" ng-cloak="" class="inputdemoIcons" ng-app="MyApp">
+        <form name="elsaForm">
+            <br>
+            <div ng-hide="myLoan" layout="column" layout-xs="column" layout-align="center center" >
+          <div flex>
+            <h1>Personal Loans Made Simple<span class="green">.</span></h1>
+          </div>
+    <!-- first -->
+              <md-content class="md-padding"  >
+                <div layout="row" class="layoutForm" layout-align="center center" layout-wrap flex="33">
+                  <div flex="100">
+                    <h4 class="title-description">How much would you like to borrow?</h4>
+                  </div>
+                  <div flex="10">
+                    <div class="input-icon input-icon-left">
+                      <img src="icons/euro-symbol.png">
+                    </div>
+                  </div>
+                  <div flex="80">
+                    <section class="" >
+                      <md-input-container class="md-chill-loan-input chill-input-container-Slider" >
+                      <!-- pattern="\d*" -->
+                        <input id="userLoan" md-theme="dark-purple"  ng-model="user.loan" format="number"  type="text"  step="100" aria-controls="loan-slider" aria-label="slider" ><label for="userLoan" >{{user.loan | number }}</label>
+                      </md-input-container>
+                    </section> 
+                  </div>
+                  <div flex="10">
+                    <div class="input-icon input-icon-right">
+                      <md-button ng-model="user.loan"  ng-click="user.loan = user.loan + 100">+</md-button>
+                      <span class="underline"> </span>
+                      <md-button ng-model="user.loan" ng-click="user.loan = user.loan - 100">-</md-button>
+                    </div>
+                  </div>
+                  <div flex="80">
+                    <md-slider-container>      
+                      <md-slider  max="60000" min="1500" ng-model="user.loan" aria-label="slider" step="100" id="loan-slider">
+                      </md-slider>     
+                    </md-slider-container>
+                  </div>
+                  <div flex="80" layout="row"       layout-align="center center">
+                  <md-button  class="md-chill-button md-chill-green-button " ng-click="applyNow()">LET'S GO</md-button>
+                </div> 
+              </div>                   
+              </md-content>
+       </div>     
+  <!-- Second -->
+            <md-tabs class="md-chill-tabs" md-dynamic-height md-selected="selectedTab"  md-align-tabs="bottom" flex="100" ng-hide="myForm" layout-align="center center">
+                <md-tab label="1" ng-hide>
+            <div flex="100">
+              <h1>What Comes In<span class="green">.</span></h1>
+            </div>
+            <md-content class="md-padding" flex="33">
+            <div layout="row" class="layoutForm" layout-wrap flex="33">
+              
+              <div flex="100">
+                <h4><span class="steps">Step 1 of 3</span> | Let us know about your income</h4>
+              </div>                
+              <div flex="10">
+                <div class="input-icon input-icon-left">
+                  <img src="icons/euro-symbol.png">
+                </div>
+              </div>
+              <div flex="90">
+                <div class="chill-input-container">
+                  <md-input-container  class="md-chill-input md-block">                  
+                    <input required name="salary"  ng-model="user.salary" format="number"  type="text"  min="1" step="0"  placeholder="Your Take-Home Pay">
+                     <div ng-messages="elsaForm.salary.$error">
+                      <div ng-message="required">Your salary is required.</div>
+                    </div>
+                  </md-input-container>
+                </div>
+              </div>
+              <div flex="10">
+                <div class="input-icon input-icon-left">
+                  <img src="icons/dependants.png">
+                </div>
+              </div>
+              <div flex="90">
+                <div class="chill-input-container">
+                  <md-input-container class="md-chill-input md-block">
+                    <label>Dependants</label>
+                    <md-select name="depend" ng-model="selectedItem" md-selected-text="getSelectedText()">
+                      <md-optgroup label="Dependants">
+                        <md-option ng-value="item" ng-repeat="item in items">{{item}}</md-option>
+                      </md-optgroup>
+                    </md-select>
+                    <div ng-messages="elsaForm.depend.$error">
+                      <div ng-message="required">Salary is required.</div>
+                    </div>
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+            <div class="btn-container" layout="row" layout-align="space-between ">
+              <div >
+                <md-button  class="md-chill-button  btn-back" ng-click="applyNow()">BACK</md-button>
+              </div>
+              <div flex="65">
+                <md-button  class="md-chill-button  btn-continue" ng-click="whatComesIn()">CONTINUE</md-button>
+              </div>
+            </div>
+              
+              
+            </md-content>
+            
+          </md-tab>
+  <!-- third -->
+                <md-tab label="2" ng-hide>
+            <md-content class="md-padding">
+             <div layout="row" class="layoutForm" layout-wrap flex="33">
+              <div flex="100">
+                <h1>What Goes Out<span class="green">.</span></h1>
+              </div>
+              <div flex="100">
+                <h4><span class="steps">Step 2 of 3</span> | Fill us in on your monthly expenses</h4>
+              </div>     
+              <div flex="10">
+                <div class="input-icon input-icon-left">
+                  <img src="icons/rent.png">
+                </div>
+              </div>
+              <div flex="90">
+                <div class="chill-input-container">
+                   
+                  <md-input-container  class="md-chill-input  md-block">
+                    <input ng-model="user.rent" format="number"  type="text" min="1" step="0"  placeholder="Rent / Mortage Payments" ng-required="true">
+                  </md-input-container>
+                </div>
+              </div>
+              <div flex="10">
+                <div class="input-icon input-icon-left">
+                  <img src="icons/credit-card.png">
+                </div>
+              </div>
+              <div flex="90">
+                <div class="chill-input-container">
+                  <md-input-container  class="md-chill-input md-block">
+                    <input ng-model="user.otherpayments" format="number"  type="text"  min="1" step="0"  placeholder="Other Monthly Loan Repayments" ng-required="true">
+                  </md-input-container>
+                </div>
+              </div>
+              <div class="btn-container" layout="row" flex="100"  layout-align="space-between ">
+                <div >
+                  <md-button   class="md-chill-button btn-back" ng-click="prevTab()">BACK</md-button>
+                </div>
+                <div flex="65">
+                  <md-button   class="md-chill-button btn-continue" ng-click="whatGoesOut()">CONTINUE</md-button>
+                </div>
+              </div>
+
+              
+            </div>
+              
+            </md-content>
+          </md-tab>
+  <!-- fourth -->
+                <md-tab label="3" ng-hide>
+          <div flex="100">
+                  <h1>Getting in touch<span class="green">.</span></h1>
+                </div>
+            <md-content class="md-padding">
+              <div layout="row" class="layoutForm" layout-wrap flex="33">
+                
+                <div flex="100">
+                  <h4><span class="steps">Step 3 of 3</span> | How should we contact you?</h4>
+                </div>   
+                <div flex="10">
+                  <div class="input-icon input-icon-left">
+                    <img src="icons/email.png">
+                  </div>
+                </div>
+                <div flex="90"> 
+                  <div class="chill-input-container">             
+                    <md-input-container class="md-chill-input md-block">
+                  <!-- Use floating placeholder instead of label -->
+                      <input ng-model="user.email" type="email" placeholder="Email Address" ng-required="true">
+                    </md-input-container>
+                  </div>
+                </div>
+                <div flex="10">
+                  <div class="input-icon input-icon-left">
+                    <img src="icons/number.png">
+                  </div>             
+                </div>
+                <div flex="90">
+                  <div class="chill-input-container">  
+                    <md-input-container  class="md-chill-input md-block">
+                      <input ng-model="user.phone" type="text" placeholder="Phone Number" ui-mask="(999) 999-9999"  ui-mask-placeholder ui-mask-placeholder-char="_" ng-required="true">
+                    </md-input-container>
+                  </div>
+                </div>
+                <div class="btn-container" layout="row" flex="100"  layout-align="space-between ">
+                  <div >
+                    <md-button  class="md-chill-button btn-back" ng-click="prevTab()">BACK</md-button>
+                  </div>
+                  <div flex="65">
+                    
+                    <md-button  class="md-chill-button btn-continue " ng-click="getInTouch()">GET APPROVED</md-button>
+                  </div>
+                </div>
+
+                
+              </div>
+            </md-content>
+          </md-tab>
+<!-- end   -->
+            </md-tabs> 
+            <div class="dotContainer" layout="row" layout-align="center center" ng-hide="myForm">
+                    <svg height="20" width="20" >
+                      <circle cx="10" cy="10" r="4" stroke="black" stroke-width="0" fill="rgba(255,255,255,0.5)" ng-class="D1" />
+                    </svg>
+                    <svg height="20" width="20" >
+                      <circle cx="10" cy="10" r="4" stroke="black" stroke-width="0" fill="rgba(255,255,255,0.5)" ng-class="D2"  />
+                    </svg>
+                    <svg height="20" width="20" >
+                      <circle cx="10" cy="10" r="4" stroke="black" stroke-width="0" fill="rgba(255,255,255,0.5)" ng-class="D3" />
+                    </svg>            
+                </div>
+            <!-- SUCCESS -->
+            <div ng-hide="successApp" layout="column" layout-xs="column" layout-align="center center" >
+                <div flex="50" layout-align="center center">
+                    <md-card flex="33" class="succes-module">
+                         <div class="md-card-img" style="background-image: url('images/bg-pattern.png');">
+                            <img ng-src="{{imagePath}}" class="" alt="Washed Out">
+                         </div>
+                        <md-card-title>
+                            <md-card-title-text>
+                                <h2><span class="md-headline">Great News!</span></h2>
+                            </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content>
+                            <p>You have been pre-approved for your loan! Smply tell us a bit more about youself and we'll take care of the rest.</p>
+                            <md-list  ng-cloak>
+                            <md-list-item class="secondary-button-padding">
+                                <p>Loan Value:</p>
+                                <p class="list-value" >{{user.loan | currency:'€' }}</p>
+                              </md-list-item>
+                              <md-list-item class="secondary-button-padding" >
+                                <p>Loan Term:</p>
+                                <p class="list-value" >{{user.maxTerm }} Years</p>
+                              </md-list-item>
+                              <md-list-item class="secondary-button-padding" >
+                                <p>Interest:</p>
+                                <p class="list-value" >{{user.monthlyPayment * user.maxTerm | currency:'€'}}</p>
+                              </md-list-item>
+                              <md-list-item class="secondary-button-padding" >
+                                <p>Total Repayment:</p>
+                                <p class="list-value">{{totalRepayment(user) | currency:'€' }}</p>
+                              </md-list-item>
+                            </md-list>
+                        </md-card-content>
+                        <md-card-actions layout="column" layout-align="start">
+                            <md-button  class="md-chill-button md-chill-green-button " ng-click="applyNow()">LET'S GO</md-button>
+                            
+                        </md-card-actions>
+                    </md-card>
+
+<!-- -------- -->
+               
+            </div>
+                </div>
+            
+            
+        </form>
+        </div>
+    </div>
+  </div>
+
+   
+    
+</body>
+</html>

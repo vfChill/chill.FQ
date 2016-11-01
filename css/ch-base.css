@@ -1,0 +1,43 @@
+@font-face {
+    font-family: ChunkFiveRegular;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/chunkfive.eot?#iefix) format("embedded-opentype"), url(../fonts/chunkfive.woff) format("woff"), url(../fonts/chunkfive.ttf) format("truetype"), url(../fonts/chunkfive.svg#ChunkFiveRegular) format("svg")
+}
+.chunkfive{
+	font-family: ChunkFiveRegular;
+}
+div:focus {
+    outline: none;
+    border: 0;
+ }
+
+
+
+.tabHeader .number{
+	background-color: #cfc9d8;
+	border-color: black;
+}
+
+.md-chill-button{
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0);
+	font-style: normal;
+	font-family: ChunkFiveRegular;
+	color: #ffffff;
+	height: 42px;
+	margin: 0px 0px; 
+	width: 100%;
+	padding-left: 25px;
+	padding-right: 25px;
+	text-align: center;
+}
+.md-chill-green-button{
+	margin: 6px 0px 6px 8px;
+	background-color: #a6c63c;
+	min-width: 80%;
+	font-size: 20pt;
+	padding-top: 5px;
+}

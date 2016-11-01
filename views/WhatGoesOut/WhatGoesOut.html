@@ -1,0 +1,53 @@
+<div ng-controller="whatGoesOut">    
+	<md-content style="margin: 16px; padding:16px" >
+		<div layout-gt-xs="row">
+			<div layout-gt-xs="row" class="md-block" flex-gt-sm>
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Rent / Mortage Payments</label>
+					<input ng-model="application.surname">
+					<div class="hint" ng-show="true">If a joint mortage, enter total monthly repayment</div>
+					
+				</md-input-container>
+			</div>
+			<div layout-gt-xs="row" class="md-block" flex-gt-sm>
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Total Overdraft Limits</label>
+					<input ng-model="application.surname">
+				</md-input-container>
+			</div>
+		</div>
+		<div layout-gt-xs="row">
+			<div layout-gt-xs="row" class="md-block" flex-gt-sm>
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>How many Credit Cards do you have?</label>
+					<input ng-model="application.surname" type="number">					
+				</md-input-container>
+			</div>
+			<div layout-gt-xs="row" class="md-block" flex-gt-sm>
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Total Credit Card Limits</label>
+					<input ng-model="application.surname">
+				</md-input-container>
+			</div>
+		</div>
+		<div layout-gt-xs="row">
+			<div layout-gt-xs="row" class="md-block" flex-gt-sm>
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Loan / Hire Purchase Repaymen</label>
+					<input ng-model="application.surname" type="number">
+					<div class="hint" ng-show="true">Excluding any mortgage repayments </div>					
+				</md-input-container>
+			</div>
+			<div layout-gt-xs="row" class="md-block" flex-gt-sm>
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Other Loan / Credit Card Repayments</label>
+					<input ng-model="application.surname">
+					<div class="hint" ng-show="true">Excluding child benefit</div>
+				</md-input-container>
+			</div>
+		</div>
+		<section layout="row" layout-sm="column" layout-align="left center" layout-wrap>
+			<md-button class="md-primary  md-raised md-hue-5" ng-click="whatGoesOut()">FINISH UP!</md-button>
+		</section>
+	</md-content>
+</div>

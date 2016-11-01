@@ -1,0 +1,83 @@
+<div ng-controller="yourLoan">  
+	<md-content style="margin: 16px; padding:16px" >
+			
+		<md-slider-container layout="row" layout-align="space-between center">
+			<span>{{ReqLnAmt.title}}</span>
+			<md-slider 	flex 
+					 	id="{{ReqLnAmt.id}}"
+						ng-model="ReqLnAmt.value"
+						aria-label="{{ReqLnAmt.label}}" 
+						min="{{ReqLnAmt.minValue}}" 
+						max="{{ReqLnAmt.maxValue}}" 	
+						step="{{ReqLnAmt.step}}"
+						ng-change="ReqLnAmtChanged(ReqLnAmt)">
+			</md-slider>
+			<md-input-container>
+				<input 	flex 
+						ng-model="ReqLnAmt.value"
+						aria-label="{{ReqLnAmt.label}}"
+						aria-controls="{{ReqLnAmt.id}}"
+						type="{{ReqLnAmt.type}}"
+						>
+			</md-input-container>
+		</md-slider-container>
+			
+		<md-slider-container layout="row" layout-align="space-between center">
+			<span>{{ReqTerm.title}}</span>
+			<md-slider 	flex 
+						id="{{ReqTerm.id}}"
+						ng-model="ReqTerm.value"
+						aria-label="{{ReqTerm.label}}" 
+						min="{{ReqTerm.minValue}}" 
+						max="{{ReqTerm.maxValue}}" 
+						step="{{ReqTerm.step}}"
+						ng-change="ReqTermChanged(ReqTerm)"
+						md-discrete>
+			</md-slider>
+			<md-input-container>
+				<input 	flex 
+						ng-model="ReqTerm.value"
+						aria-label="{{ReqTerm.label}}"
+						aria-controls="{{ReqTerm.id}}"
+						type="{{ReqTerm.type}}"
+						readonly>
+			</md-input-container>
+		</md-slider-container>
+			
+		<md-input-container class="md-block" flex-gt-sm>
+			<label>{{Purpose.title}}</label>
+			<md-select 
+				ng-model="Purpose.value" 
+				ng-change="purposeLoanChanged(Purpose)">
+				<md-option 
+					ng-repeat="loanPurpose in loanPurposes" 
+					value="{{loanPurpose.value}}">
+					{{loanPurpose.description}}
+				</md-option>
+			</md-select>
+		</md-input-container>
+			
+		<md-checkbox 			
+			ng-model="data.cb1">
+			I confirm that I am over 18 and resident in the Republic of ireland
+		</md-checkbox>
+		<md-checkbox 						
+			id = "{{Consent.id}}"			
+			ng-model="Consent.value"
+			ng-change="consentChanged(Consent)">
+			{{Consent.FieldName}}
+		</md-checkbox>
+		
+		<section 
+			layout="row" 
+			layout-sm="column" 
+			layout-align="left center" 
+			layout-wrap>
+			<md-button 
+				class="md-primary  md-raised md-hue-5" 
+				ng-click="yourLoanbtn()">
+				Continue
+			</md-button>
+		</section>
+	</md-content>
+</div>
